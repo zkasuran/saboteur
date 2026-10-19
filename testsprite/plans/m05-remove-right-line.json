@@ -1,0 +1,37 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "Removing one cart line keeps the other",
+  "description": "With two different items, Remove must delete only the chosen line.",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, click \"Add to cart\" for Bud Vase once"
+    },
+    {
+      "type": "action",
+      "description": "Click \"Add to cart\" for Planter once"
+    },
+    {
+      "type": "action",
+      "description": "Click the Cart link in the store header"
+    },
+    {
+      "type": "action",
+      "description": "Click the Remove button on the Planter line"
+    },
+    {
+      "type": "assertion",
+      "description": "The cart still lists Bud Vase"
+    },
+    {
+      "type": "assertion",
+      "description": "The cart no longer lists Planter"
+    },
+    {
+      "type": "assertion",
+      "description": "The Subtotal row reads exactly $14.75"
+    }
+  ]
+}

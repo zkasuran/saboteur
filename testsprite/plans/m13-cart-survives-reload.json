@@ -1,0 +1,29 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "The cart survives a page reload",
+  "description": "Items in the cart must still be there after reloading.",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, click \"Add to cart\" for Planter twice"
+    },
+    {
+      "type": "action",
+      "description": "Click the Cart link in the store header"
+    },
+    {
+      "type": "assertion",
+      "description": "The Planter line shows quantity 2"
+    },
+    {
+      "type": "action",
+      "description": "Reload the page"
+    },
+    {
+      "type": "assertion",
+      "description": "The cart still shows the Planter line with quantity 2 and a Subtotal of exactly $55.00"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "Checkout rejects an invalid email",
+  "description": "An email without @ must block the order with an error on the email field.",
+  "priority": "p0",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, click \"Add to cart\" for Spoon Rest once"
+    },
+    {
+      "type": "action",
+      "description": "Click the Cart link in the store header, then click the Checkout button"
+    },
+    {
+      "type": "action",
+      "description": "Fill Full name with Ada Lovelace, Email with not-an-email, Street address with 12 Analytical St and Postal code with SW1A 1AA"
+    },
+    {
+      "type": "action",
+      "description": "Click the Place order button"
+    },
+    {
+      "type": "assertion",
+      "description": "The page is still the Checkout page and no order confirmation is shown"
+    },
+    {
+      "type": "assertion",
+      "description": "An error under the Email field says to enter a valid email address"
+    }
+  ]
+}

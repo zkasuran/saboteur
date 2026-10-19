@@ -1,0 +1,25 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "Sort by price puts the cheapest first",
+  "description": "Price: low to high must list Spoon Rest ($9.25) first and Serving Platter ($46.00) last.",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, choose \"Price: low to high\" in the Sort dropdown"
+    },
+    {
+      "type": "assertion",
+      "description": "The first product card is Spoon Rest at $9.25"
+    },
+    {
+      "type": "assertion",
+      "description": "The second product card is Bud Vase at $14.75"
+    },
+    {
+      "type": "assertion",
+      "description": "The last product card is Serving Platter at $46.00"
+    }
+  ]
+}

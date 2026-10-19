@@ -1,0 +1,37 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "Confirmation charges the cart total",
+  "description": "The thank-you page must show subtotal minus discount plus shipping.",
+  "priority": "p0",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, click \"Add to cart\" for Speckled Mug once"
+    },
+    {
+      "type": "action",
+      "description": "Click the Cart link in the store header"
+    },
+    {
+      "type": "assertion",
+      "description": "The Total row reads exactly $24.50"
+    },
+    {
+      "type": "action",
+      "description": "Click the Checkout button"
+    },
+    {
+      "type": "action",
+      "description": "Fill Full name with Ada Lovelace, Email with ada@example.com, Street address with 12 Analytical St and Postal code with SW1A 1AA, then click Place order"
+    },
+    {
+      "type": "assertion",
+      "description": "The confirmation page says Order placed"
+    },
+    {
+      "type": "assertion",
+      "description": "The Total charged amount reads exactly $24.50"
+    }
+  ]
+}

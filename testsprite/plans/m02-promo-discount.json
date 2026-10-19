@@ -1,0 +1,29 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "Promo SAVE10 actually lowers the total",
+  "description": "Applying SAVE10 must change the discount and total, not only show a message.",
+  "priority": "p0",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, click \"Add to cart\" for Serving Platter once"
+    },
+    {
+      "type": "action",
+      "description": "Click the Cart link in the store header"
+    },
+    {
+      "type": "action",
+      "description": "Type SAVE10 into the Promo code field and click Apply"
+    },
+    {
+      "type": "assertion",
+      "description": "The Discount row reads exactly -$4.60"
+    },
+    {
+      "type": "assertion",
+      "description": "The Shipping row reads $6.00 and the Total row reads exactly $47.40"
+    }
+  ]
+}

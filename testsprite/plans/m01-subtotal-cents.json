@@ -1,0 +1,29 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "Cart subtotal keeps the cents",
+  "description": "Three Speckled Mugs at $18.50 must total exactly $55.50.",
+  "priority": "p0",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, click the \"Add to cart\" button for Speckled Mug three times"
+    },
+    {
+      "type": "action",
+      "description": "Click the Cart link in the store header"
+    },
+    {
+      "type": "assertion",
+      "description": "The cart line for Speckled Mug shows quantity 3"
+    },
+    {
+      "type": "assertion",
+      "description": "The Subtotal row in the order summary reads exactly $55.50"
+    },
+    {
+      "type": "assertion",
+      "description": "The Shipping row reads Free and the Total row reads exactly $55.50"
+    }
+  ]
+}
