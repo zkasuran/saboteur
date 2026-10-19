@@ -1,0 +1,233 @@
+{
+  "total": 28,
+  "passed": 25,
+  "failed": 3,
+  "skipped": 0,
+  "timedOut": 0,
+  "runs": [
+    {
+      "testId": "27c481e2-51c9-4ba4-aa75-6cb6d8f1ee75",
+      "title": "Cart subtotal keeps the cents",
+      "runId": "9df60975-51cb-4dd8-9495-adefe9331551",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/27c481e2-51c9-4ba4-aa75-6cb6d8f1ee75",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/c6275b77-d435-498d-aa61-9378bfa38031/test/9df60975-51cb-4dd8-9495-adefe9331551"
+    },
+    {
+      "testId": "12e18c0e-c15f-4d21-b23e-6d2e75aaa4e0",
+      "title": "Sort by price puts the cheapest first",
+      "runId": "d9e60c06-83ed-4a39-9da6-91f16a624a33",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/12e18c0e-c15f-4d21-b23e-6d2e75aaa4e0",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/b77fb286-1689-4e02-8f5f-edb97bc9e42a/test/d9e60c06-83ed-4a39-9da6-91f16a624a33"
+    },
+    {
+      "testId": "4e39116c-24e0-4feb-9728-f9c6fb1eb8c4",
+      "title": "Checkout rejects an invalid email",
+      "runId": "824b4497-8374-4c97-8cec-d7d260209e7f",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/4e39116c-24e0-4feb-9728-f9c6fb1eb8c4",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/b560f88e-2bac-409d-946b-b8daadb54920/test/824b4497-8374-4c97-8cec-d7d260209e7f"
+    },
+    {
+      "testId": "50b4db77-d751-4a4e-a80c-7862f5d6fdc5",
+      "title": "A sold-out item cannot be added",
+      "runId": "92be1adb-5f4a-4839-bdf6-05c7e8bd4300",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/50b4db77-d751-4a4e-a80c-7862f5d6fdc5",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/09e3e084-9913-4864-99ad-f233b70bda44/test/92be1adb-5f4a-4839-bdf6-05c7e8bd4300"
+    },
+    {
+      "testId": "871462d6-afa7-4231-a05e-b75ca970a9b0",
+      "title": "Free shipping starts at exactly $50.00",
+      "runId": "355aa815-21f7-4d5d-b44d-c20e503b6d4e",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/871462d6-afa7-4231-a05e-b75ca970a9b0",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/addc4b02-c1a3-44de-bfc7-8626ead81f82/test/355aa815-21f7-4d5d-b44d-c20e503b6d4e"
+    },
+    {
+      "testId": "afc406df-069e-49fe-a8aa-02d093b47e05",
+      "title": "Removing one cart line keeps the other",
+      "runId": "96d7711e-addb-403a-a086-7ecec87435b9",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/afc406df-069e-49fe-a8aa-02d093b47e05",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/ddcef8e1-d521-4ed0-813a-2db2c1c7e7e7/test/96d7711e-addb-403a-a086-7ecec87435b9"
+    },
+    {
+      "testId": "86bd3a1c-ba3b-4819-bb88-5ec28566d48a",
+      "title": "Confirmation charges the cart total",
+      "runId": "2d44730e-bad0-426d-832b-bd8906ee9f11",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/86bd3a1c-ba3b-4819-bb88-5ec28566d48a",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/8fa151e6-a5df-484e-b550-fa486824864e/test/2d44730e-bad0-426d-832b-bd8906ee9f11"
+    },
+    {
+      "testId": "e568ea40-4cd7-4a65-92e2-db96f83cf97b",
+      "title": "Promo SAVE10 actually lowers the total",
+      "runId": "0fdd8bbd-7968-4963-98bb-941c19796e33",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/e568ea40-4cd7-4a65-92e2-db96f83cf97b",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/8d28fb37-ae54-4120-b057-e5ef8e8d384a/test/0fdd8bbd-7968-4963-98bb-941c19796e33"
+    },
+    {
+      "testId": "1fd92c42-5053-45fd-bd42-1387eeb7c571",
+      "title": "The cart survives a page reload",
+      "runId": "652d9e2c-cd1a-4879-ba8c-f4371e385144",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/1fd92c42-5053-45fd-bd42-1387eeb7c571",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/2a056dce-ad51-42dd-91c0-0ef349361986/test/652d9e2c-cd1a-4879-ba8c-f4371e385144"
+    },
+    {
+      "testId": "cc1f88d1-9dd2-44da-a590-f5074cea3b70",
+      "title": "Require checkout fields before placing an order",
+      "runId": "f9209394-5887-4935-9c5a-80f9b5d6bb94",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/cc1f88d1-9dd2-44da-a590-f5074cea3b70",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/3ab24da4-269b-49af-a403-4e6006a78d64/test/f9209394-5887-4935-9c5a-80f9b5d6bb94"
+    },
+    {
+      "testId": "d8ccdeb7-8c6f-4db1-89c2-d710c0e39024",
+      "title": "Place an order from a cart with an updated quantity",
+      "runId": "c9d0783f-ac95-47a0-9e18-5c9832f0d7c1",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/d8ccdeb7-8c6f-4db1-89c2-d710c0e39024",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/55a89b9e-59a4-42f7-8d01-7e4b16a42e5e/test/c9d0783f-ac95-47a0-9e18-5c9832f0d7c1"
+    },
+    {
+      "testId": "e1348aef-1bbc-4164-8316-411b9e021b77",
+      "title": "Open a product detail page from the catalog",
+      "runId": "06cdef35-5eb1-4c2d-864b-ae91a8670bf3",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/e1348aef-1bbc-4164-8316-411b9e021b77",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/b3f96293-94bf-460b-b1a6-7c8ae8a36755/test/06cdef35-5eb1-4c2d-864b-ae91a8670bf3"
+    },
+    {
+      "testId": "8d191281-0cdc-4be7-bf7b-a582d95bda13",
+      "title": "Clear a search and return to the full catalog",
+      "runId": "82e332b4-3c91-4f12-b303-330f9b1dd5c5",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/8d191281-0cdc-4be7-bf7b-a582d95bda13",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/58637d3d-9958-4558-b319-c61e1b8c3f5e/test/82e332b4-3c91-4f12-b303-330f9b1dd5c5"
+    },
+    {
+      "testId": "ad42a9d5-3867-4b79-b0aa-c8c2e2fb35cc",
+      "title": "Add product to cart from shop",
+      "runId": "725e88cf-88dd-4927-b50b-3f537b6cbad5",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/ad42a9d5-3867-4b79-b0aa-c8c2e2fb35cc",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/79e00895-646d-4c86-80cf-3f0a3085e0e2/test/725e88cf-88dd-4927-b50b-3f537b6cbad5"
+    },
+    {
+      "testId": "96078a47-607e-41c3-9962-7a74851f9881",
+      "title": "View product details from the shop",
+      "runId": "5b6b47c8-5270-483d-92a3-2f6140dc81e6",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/96078a47-607e-41c3-9962-7a74851f9881",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/0f36a0f6-de89-4c96-b56b-510d9ea230bc/test/5b6b47c8-5270-483d-92a3-2f6140dc81e6"
+    },
+    {
+      "testId": "87f252d7-158e-4efb-92ff-5c837fa93d56",
+      "title": "Browse the full shop catalog",
+      "runId": "ab8f9852-a717-4dd9-bd3a-4fb482b180db",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/87f252d7-158e-4efb-92ff-5c837fa93d56",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/2a097d7e-c9ae-4f48-bb65-030d79bf45c2/test/ab8f9852-a717-4dd9-bd3a-4fb482b180db"
+    },
+    {
+      "testId": "e9ed269d-b609-4756-9f63-741f8bec4abe",
+      "title": "Order confirmation preserves purchased item summary",
+      "runId": "7bbb60d1-b6d4-41b1-9cde-6dae96f4f5db",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/e9ed269d-b609-4756-9f63-741f8bec4abe",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/0c0502bc-6c6b-4a34-9e43-aab7fa1a0a5e/test/7bbb60d1-b6d4-41b1-9cde-6dae96f4f5db"
+    },
+    {
+      "testId": "735e8671-2042-433c-bacd-db65bb062c2e",
+      "title": "Apply valid promo code in cart",
+      "runId": "15f646d5-d961-41b8-a37a-8856d0f4c160",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/735e8671-2042-433c-bacd-db65bb062c2e",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/42e01c76-782d-45cd-ad7b-1f63b481355e/test/15f646d5-d961-41b8-a37a-8856d0f4c160"
+    },
+    {
+      "testId": "29cf9a19-7183-428d-95a6-dbbd7d577773",
+      "title": "Search for a product by name",
+      "runId": "22e7427a-e443-4e65-a4d6-173fcb94d64c",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/29cf9a19-7183-428d-95a6-dbbd7d577773",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/2c4a0f34-ca7f-410e-b837-642af6b246d5/test/22e7427a-e443-4e65-a4d6-173fcb94d64c"
+    },
+    {
+      "testId": "fff4d02c-05cd-4aab-80a3-8ccdd52418e8",
+      "title": "Show shipping totals based on cart contents",
+      "runId": "323dc62d-93f0-4a54-81de-8f668d44092c",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/fff4d02c-05cd-4aab-80a3-8ccdd52418e8",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/8eb58337-20d4-423b-a91d-8caf7501a763/test/323dc62d-93f0-4a54-81de-8f668d44092c"
+    },
+    {
+      "testId": "1b12c162-c632-4097-8764-572e8bd55913",
+      "title": "Sort the catalog by price",
+      "runId": "95c738f4-5b6b-47e9-acba-b56bca07fc1e",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/1b12c162-c632-4097-8764-572e8bd55913",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/e544b480-6220-4330-9b0c-76124d2ed6b5/test/95c738f4-5b6b-47e9-acba-b56bca07fc1e"
+    },
+    {
+      "testId": "6d7b5dd6-2df0-4c55-861b-97eb9397e343",
+      "title": "Order confirmation shows completed purchase details",
+      "runId": "0d32068b-796e-47ea-af90-3127235a72c4",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/6d7b5dd6-2df0-4c55-861b-97eb9397e343",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/99b22f3e-b700-4b6e-98b4-f431f892cfe1/test/0d32068b-796e-47ea-af90-3127235a72c4"
+    },
+    {
+      "testId": "649807fe-cf54-48d3-b571-fb682b374068",
+      "title": "Complete checkout with valid shipping and payment details",
+      "runId": "6acc1c72-7349-4e0f-ab6d-1aff07e87018",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/649807fe-cf54-48d3-b571-fb682b374068",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/a0d188e0-f996-44c1-8145-e4df9f84f475/test/6acc1c72-7349-4e0f-ab6d-1aff07e87018"
+    },
+    {
+      "testId": "0920baff-85de-475b-a3af-867ddc94cbe7",
+      "title": "Proceed from cart to checkout",
+      "runId": "28a41dcd-3fce-40bf-8711-469c27e5eb7f",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/0920baff-85de-475b-a3af-867ddc94cbe7",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/cceaeda7-2ce5-42e8-b799-d7d5ced08521/test/28a41dcd-3fce-40bf-8711-469c27e5eb7f"
+    },
+    {
+      "testId": "185e2b1f-1d7f-4a66-96e4-3573906c7ba9",
+      "title": "Remove item from cart",
+      "runId": "a58edcaf-ae8b-422c-9a30-1b82f81d29b7",
+      "status": "passed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/185e2b1f-1d7f-4a66-96e4-3573906c7ba9",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/e7e1b0b5-cf6b-43a8-bf66-c69a4857f155/test/a58edcaf-ae8b-422c-9a30-1b82f81d29b7"
+    },
+    {
+      "testId": "769e7fd0-a3cd-4df7-9bf7-69d5eb52a236",
+      "title": "Continue shopping from a product page",
+      "runId": "c3067119-8e8a-4648-bb98-958cde4bef2b",
+      "status": "failed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/769e7fd0-a3cd-4df7-9bf7-69d5eb52a236",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/19f3e4c0-4d31-4bd2-a860-ee1411c9d9f4/test/c3067119-8e8a-4648-bb98-958cde4bef2b"
+    },
+    {
+      "testId": "4a59207d-c32b-4b17-af02-f3a782d8b19c",
+      "title": "Update item quantity in cart",
+      "runId": "d61c5e4c-c2d1-4e43-b9cb-7d461416029a",
+      "status": "failed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/4a59207d-c32b-4b17-af02-f3a782d8b19c",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/5d38c406-ef13-4272-b1cf-6c41fe07501e/test/d61c5e4c-c2d1-4e43-b9cb-7d461416029a"
+    },
+    {
+      "testId": "49bc73ba-c9bc-43b6-906a-47baf06b4ef3",
+      "title": "Add a product to the cart from the product page",
+      "runId": "6b444448-3e03-4051-b7ee-0ce3397c5c48",
+      "status": "failed",
+      "dashboardUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/test-cases/49bc73ba-c9bc-43b6-906a-47baf06b4ef3",
+      "executionUrl": "https://www.testsprite.com/dashboard-v3/o/517fb9d2-693e-50dc-bc21-ed604b032c75/projects/4fa4606f-0595-4ceb-9cd2-c6731b13e1c9/execution/60f0a130-8118-4b04-9a5a-067b0fc54028/test/6b444448-3e03-4051-b7ee-0ce3397c5c48"
+    }
+  ]
+}
