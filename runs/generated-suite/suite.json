@@ -1,0 +1,537 @@
+{
+  "items": [
+    {
+      "id": "fff4d02c-05cd-4aab-80a3-8ccdd52418e8",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Show shipping totals based on cart contents",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that cart shipping-related totals are displayed and update with cart contents.",
+      "planStepCount": 6,
+      "priority": "Medium",
+      "category": "Cart Management",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:43.305Z"
+    },
+    {
+      "id": "e9ed269d-b609-4756-9f63-741f8bec4abe",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Order confirmation preserves purchased item summary",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that after checkout, the confirmation screen reflects the purchased items from the order without requiring manual navigation back to the cart.",
+      "planStepCount": 9,
+      "priority": "Medium",
+      "category": "Order Confirmation",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:54.408Z"
+    },
+    {
+      "id": "e1348aef-1bbc-4164-8316-411b9e021b77",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Open a product detail page from the catalog",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Verify a shopper can open a product from the catalog and view its details.",
+      "planStepCount": 4,
+      "priority": "High",
+      "category": "Shop Browse & Search",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:28.027Z"
+    },
+    {
+      "id": "d8ccdeb7-8c6f-4db1-89c2-d710c0e39024",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Place an order from a cart with updated quantity and shipping selection",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that cart quantity changes carry into checkout and the shopper can complete an order after selecting shipping.",
+      "planStepCount": 10,
+      "priority": "Medium",
+      "category": "Checkout",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:25:37.677Z"
+    },
+    {
+      "id": "cc1f88d1-9dd2-44da-a590-f5074cea3b70",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Require checkout fields before placing an order",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that checkout form validation prevents order placement when required customer details are missing.",
+      "planStepCount": 7,
+      "priority": "High",
+      "category": "Checkout",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:53.226Z"
+    },
+    {
+      "id": "ad42a9d5-3867-4b79-b0aa-c8c2e2fb35cc",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Add product to cart from shop",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that a shopper can add an item from the shop and see it reflected in the cart.",
+      "planStepCount": 6,
+      "priority": "High",
+      "category": "Cart Management",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:32.093Z"
+    },
+    {
+      "id": "96078a47-607e-41c3-9962-7a74851f9881",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "View product details from the shop",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that a shopper can open a product detail page and see the key product information before adding it to the cart.",
+      "planStepCount": 4,
+      "priority": "High",
+      "category": "Product Detail",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:27.904Z"
+    },
+    {
+      "id": "8d191281-0cdc-4be7-bf7b-a582d95bda13",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Clear a search and return to the full catalog",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Verify a shopper can search for a product and then return to the full product listing.",
+      "planStepCount": 5,
+      "priority": "Medium",
+      "category": "Shop Browse & Search",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:33.095Z"
+    },
+    {
+      "id": "87f252d7-158e-4efb-92ff-5c837fa93d56",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Browse the full shop catalog",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Verify a shopper can open the catalog and view the full set of products.",
+      "planStepCount": 3,
+      "priority": "High",
+      "category": "Shop Browse & Search",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:34.847Z"
+    },
+    {
+      "id": "769e7fd0-a3cd-4df7-9bf7-69d5eb52a236",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Continue shopping from a product page",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that a shopper can open a product page, add an item, and return to browsing without losing the cart state.",
+      "planStepCount": 6,
+      "priority": "Medium",
+      "category": "Product Detail",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:32.522Z"
+    },
+    {
+      "id": "735e8671-2042-433c-bacd-db65bb062c2e",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Apply valid promo code in cart",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that entering the SAVE10 promo code updates the cart totals correctly.",
+      "planStepCount": 8,
+      "priority": "High",
+      "category": "Cart Management",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:47.038Z"
+    },
+    {
+      "id": "6d7b5dd6-2df0-4c55-861b-97eb9397e343",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Order confirmation shows completed purchase details",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that a successful checkout lands on the order confirmation screen with the purchase summary and next-step actions.",
+      "planStepCount": 9,
+      "priority": "High",
+      "category": "Order Confirmation",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:54.739Z"
+    },
+    {
+      "id": "649807fe-cf54-48d3-b571-fb682b374068",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Complete checkout with valid shipping and payment details",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that a shopper can move from cart review through checkout form submission and reach the order confirmation page.",
+      "planStepCount": 8,
+      "priority": "High",
+      "category": "Checkout",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:59.810Z"
+    },
+    {
+      "id": "4a59207d-c32b-4b17-af02-f3a782d8b19c",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Update item quantity in cart",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that cart quantities can be increased and the updated quantity is reflected in the cart summary.",
+      "planStepCount": 7,
+      "priority": "High",
+      "category": "Cart Management",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:54.884Z"
+    },
+    {
+      "id": "49bc73ba-c9bc-43b6-906a-47baf06b4ef3",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Add a product to the cart from the product page",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that a shopper can add a product from its detail page and continue to the cart with the item present.",
+      "planStepCount": 6,
+      "priority": "High",
+      "category": "Product Detail",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:30.428Z"
+    },
+    {
+      "id": "29cf9a19-7183-428d-95a6-dbbd7d577773",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Search for a product by name",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Verify a shopper can search the catalog and see only matching products.",
+      "planStepCount": 4,
+      "priority": "High",
+      "category": "Shop Browse & Search",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:22.186Z"
+    },
+    {
+      "id": "1b12c162-c632-4097-8764-572e8bd55913",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Sort the catalog by price",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Verify a shopper can change the catalog sort order and see products reordered accordingly.",
+      "planStepCount": 4,
+      "priority": "High",
+      "category": "Shop Browse & Search",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:25.162Z"
+    },
+    {
+      "id": "185e2b1f-1d7f-4a66-96e4-3573906c7ba9",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Remove item from cart",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that a shopper can remove an item and return to an empty cart state.",
+      "planStepCount": 7,
+      "priority": "High",
+      "category": "Cart Management",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:36.730Z"
+    },
+    {
+      "id": "0920baff-85de-475b-a3af-867ddc94cbe7",
+      "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+      "projectName": "Saboteur · Kiln demo store",
+      "name": "Proceed from cart to checkout",
+      "type": "frontend",
+      "createdFrom": "cli",
+      "status": "passed",
+      "statusByEnvironment": [
+        {
+          "environmentId": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+          "environmentName": "default",
+          "status": "passed"
+        }
+      ],
+      "headlineEnvironment": {
+        "id": "36e02a35-f881-4bc3-b62b-04f2909eec9c",
+        "name": "default"
+      },
+      "description": "Validates that a shopper can continue from the cart to the checkout flow with items preserved.",
+      "planStepCount": 7,
+      "priority": "High",
+      "category": "Cart Management",
+      "produces": null,
+      "consumes": null,
+      "createdAt": "2026-10-19T00:23:29.426Z",
+      "updatedAt": "2026-10-19T00:24:45.218Z"
+    }
+  ],
+  "nextToken": null
+}

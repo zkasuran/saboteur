@@ -146,7 +146,7 @@ async function envs(args: Args): Promise<void> {
 
 // ---------------- run ----------------
 
-async function rerun(p: string, env: string | null, file: string): Promise<void> {
+async function rerun(p: string, env: string | null, file: string, label = env ?? "clean"): Promise<void> {
   const argv = ["--output", "json", "test", "rerun", "--all", "--project", p, "--no-auto-heal", "--wait", "--timeout", "1800", "--summary-file", file];
   if (env) argv.push("--env", env);
   const started = Date.now();
@@ -155,12 +155,51 @@ async function rerun(p: string, env: string | null, file: string): Promise<void>
   // Exit 1 just means some test failed, which is the point on a sabotaged build. Only a missing summary is an error.
   if (!existsSync(file)) {
     writeFileSync(join(file + ".err.txt"), `${r.code}\n${r.stderr}\n${r.stdout}`.slice(0, 64 * 1024));
-    process.stdout.write(`FAIL ${env ?? "clean"} (exit ${r.code}, ${secs}s): no summary; see ${file}.err.txt\n`);
+    process.stdout.write(`FAIL ${label} (exit ${r.code}, ${secs}s): no summary; see ${file}.err.txt\n`);
     process.exitCode = 1;
     return;
   }
   const s = rec(JSON.parse(readFileSync(file, "utf8")));
-  process.stdout.write(`done ${env ?? "clean"} in ${secs}s: ${s.passed}/${s.total} passed, ${s.failed} failed, ${s.timedOut} timed out, ${s.skipped} skipped\n`);
+  process.stdout.write(`done ${label} in ${secs}s: ${s.passed}/${s.total} passed, ${s.failed} failed, ${s.timedOut} timed out, ${s.skipped} skipped\n`);
+}
+
+/**
+ * Plans with one environment (TestSprite Starter) cannot hold an environment per fault. Saved test code
+ * navigates to the environment URL (`VAR_{url}`), so the runner points the single environment at each
+ * sabotaged URL in turn, replays, and always restores the clean URL, even on failure or Ctrl-C.
+ */
+async function runSingleEnv(args: Args, p: string, dir: string, resume: boolean): Promise<void> {
+  const o = origin(args);
+  const env = typeof args.env === "string" ? args.env : "default";
+  if (!/^[A-Za-z0-9_-]{1,64}$/.test(env)) die("--env must be an environment name");
+  const path = typeof args.path === "string" ? args.path : "/shop";
+  if (!/^\/[A-Za-z0-9/_-]*$/.test(path)) die("--path must be a simple absolute path");
+  const cleanUrl = `${o}${path}`;
+  const point = async (url: string) => {
+    const r = await ts(["--output", "json", "project", "env", "update", p, env, "--url", url]);
+    if (r.code !== 0) throw new Error(`env update to ${url} failed: ${(r.stderr || r.stdout).trim().slice(-300)}`);
+  };
+  let restored = false;
+  const restore = async () => {
+    if (restored) return;
+    restored = true;
+    await point(cleanUrl);
+    process.stdout.write(`restored ${env} -> ${cleanUrl}\n`);
+  };
+  const onSignal = () => void restore().finally(() => process.exit(130));
+  process.once("SIGINT", onSignal);
+  process.once("SIGTERM", onSignal);
+  try {
+    await point(cleanUrl);
+    if (!(resume && existsSync(join(dir, "clean.json"))) && args["skip-clean"] !== true) await rerun(p, null, join(dir, "clean.json"));
+    for (const c of faultList(args)) {
+      if (resume && existsSync(join(dir, `${c}.json`))) continue;
+      await point(`${o}/x/${c}${path}`);
+      await rerun(p, null, join(dir, `${c}.json`), c);
+    }
+  } finally {
+    await restore();
+  }
 }
 
 async function run(args: Args): Promise<void> {
@@ -168,8 +207,16 @@ async function run(args: Args): Promise<void> {
   const dir = join(ROOT, "runs", slug(str(args, "label")));
   mkdirSync(dir, { recursive: true });
   const resume = args.resume === true;
+  if (args["single-env"] === true) {
+    const listed = await ts(["--output", "json", "test", "list", "--project", p, "--page-size", "100"]);
+    if (listed.code !== 0) die(`test list failed: ${listed.stderr.trim()}`);
+    writeFileSync(join(dir, "suite.json"), JSON.stringify(json(listed.stdout), null, 2));
+    await runSingleEnv(args, p, dir, resume);
+    process.stdout.write(`summaries in ${dir}\n`);
+    return;
+  }
   const parallel = Math.max(1, Math.min(5, Number(args.parallel ?? 2) || 2));
-  const listed = await ts(["--output", "json", "test", "list", "--project", p, "--page-size", "200"]);
+  const listed = await ts(["--output", "json", "test", "list", "--project", p, "--page-size", "100"]);
   if (listed.code !== 0) die(`test list failed: ${listed.stderr.trim()}`);
   writeFileSync(join(dir, "suite.json"), JSON.stringify(json(listed.stdout), null, 2));
   if (!(resume && existsSync(join(dir, "clean.json"))) && args["skip-clean"] !== true) await rerun(p, null, join(dir, "clean.json"));
