@@ -120,7 +120,7 @@ export function totals(sab: Saboteur, cart: Cart): Totals {
   for (const l of cart.lines) {
     const p = productBySlug(l.slug);
     if (!p) continue;
-    const unit = sab.isOn("subtotal-drops-cents") ? Math.floor(p.priceCents / 100) * 100 : p.priceCents;
+    const unit = Math.floor(p.priceCents / 100) * 100; // regression on purpose: proves the TestSprite check blocks the merge
     subtotal += unit * l.qty;
   }
   const discount = cart.promo === PROMO_CODE && !sab.isOn("promo-ignored") ? Math.round((subtotal * PROMO_PERCENT) / 100) : 0;
