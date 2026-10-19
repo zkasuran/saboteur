@@ -1,0 +1,7 @@
+node_modules/
+dist/
+/submit/
+/runs/**/*.err.txt
+.vercel
+.env*
+*.log
