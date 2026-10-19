@@ -26,3 +26,19 @@ testsprite test create --plan-from testsprite/plans/<file>.json
 updated quantity and shipping selection". It asked the browser to pick a shipping option, and Kiln has never had
 one (one flat $6.00 rate, free from $50.00), so it failed on every correct build. The new plan keeps its intent and
 asserts exact totals instead.
+
+## Stored test code (`testsprite/code/`)
+
+What TestSprite actually replays. Two problems found while running the second matrix made this necessary:
+
+- **PR runs pinned the PR's preview URL into the code.** With auto-heal on, a PR-triggered run rewrote
+  `page.goto("VAR_{url}")` into the absolute preview URL of that PR. Every later replay visited the old preview,
+  whatever environment it was started against, so all 14 sabotaged builds scored identically.
+- **Auto-heal weakened assertions.** After healing, "Confirmation charges the cart total" checked only that the
+  words "Order placed" and "Receipt" appeared; every exact amount the plan asked for was gone.
+
+`m*.py` are hand-written for the nine survivor tests (`scripts/write_tests.py`): they open `VAR_{url}` and assert
+exact amounts on `data-testid` cells. Each was run locally against the clean build (passes) and its own sabotaged
+build (fails) before upload. `generated/` is the generated suite after `scripts/repair_code.py`: navigation back
+on `VAR_{url}`, plus four selector fixes for steps that could not pass on a correct build. Uploaded with
+`testsprite test code put --expected-version`, which also stops auto-heal from rewriting them again.
