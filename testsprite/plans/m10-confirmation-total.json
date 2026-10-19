@@ -2,7 +2,7 @@
   "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
   "type": "frontend",
   "name": "Confirmation charges the cart total",
-  "description": "The thank-you page must show subtotal minus discount plus shipping.",
+  "description": "The receipt must itemise subtotal, discount, shipping and total, and charge the cart total.",
   "priority": "p0",
   "planSteps": [
     {
@@ -14,8 +14,12 @@
       "description": "Click the Cart link in the store header"
     },
     {
+      "type": "action",
+      "description": "Type SAVE10 into the Promo code field and click Apply"
+    },
+    {
       "type": "assertion",
-      "description": "The Total row reads exactly $24.50"
+      "description": "The order summary shows Subtotal $18.50, Discount -$1.85, Shipping $6.00 and Total $22.65"
     },
     {
       "type": "action",
@@ -31,7 +35,19 @@
     },
     {
       "type": "assertion",
-      "description": "The Total charged amount reads exactly $24.50"
+      "description": "The receipt on the confirmation page lists a Subtotal of exactly $18.50"
+    },
+    {
+      "type": "assertion",
+      "description": "The receipt lists a Discount of exactly -$1.85"
+    },
+    {
+      "type": "assertion",
+      "description": "The receipt lists Shipping of exactly $6.00"
+    },
+    {
+      "type": "assertion",
+      "description": "The Total charged amount reads exactly $22.65"
     }
   ]
 }
