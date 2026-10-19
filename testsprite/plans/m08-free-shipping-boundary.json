@@ -1,0 +1,33 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "Free shipping starts at exactly $50.00",
+  "description": "Two Stoneware Bowls ($50.00) must ship free; one bowl must not.",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, click \"Add to cart\" for Stoneware Bowl twice"
+    },
+    {
+      "type": "action",
+      "description": "Click the Cart link in the store header"
+    },
+    {
+      "type": "assertion",
+      "description": "The Subtotal row reads exactly $50.00"
+    },
+    {
+      "type": "assertion",
+      "description": "The Shipping row reads Free and the Total row reads exactly $50.00"
+    },
+    {
+      "type": "action",
+      "description": "Click the minus button on the Stoneware Bowl line once"
+    },
+    {
+      "type": "assertion",
+      "description": "The Shipping row now reads $6.00 and the Total row reads exactly $31.00"
+    }
+  ]
+}

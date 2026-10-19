@@ -203,6 +203,7 @@ main:focus { outline: none; }
 .mini-lines { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 4px; }
 .checkout-form { display: grid; gap: 16px; }
 .confirm { display: grid; gap: 12px; justify-items: start; }
+.receipt { width: 100%; max-width: 360px; }
 .confirm-total { font-size: 20px; margin: 8px 0; }
 
 /* ---------- reveal strip ---------- */

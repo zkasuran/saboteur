@@ -1,0 +1,41 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "Place an order from a cart with an updated quantity",
+  "description": "Raising a quantity in the cart must carry through checkout to the confirmation. Kiln has one flat shipping rate, so there is no shipping option to choose.",
+  "priority": "p2",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, click \"Add to cart\" for Speckled Mug once"
+    },
+    {
+      "type": "action",
+      "description": "Click the Cart link in the store header"
+    },
+    {
+      "type": "action",
+      "description": "Click the plus button on the Speckled Mug line once"
+    },
+    {
+      "type": "assertion",
+      "description": "The Speckled Mug line shows quantity 2 and the Total row reads exactly $43.00"
+    },
+    {
+      "type": "action",
+      "description": "Click the Checkout button"
+    },
+    {
+      "type": "action",
+      "description": "Fill Full name with Ada Lovelace, Email with ada@example.com, Street address with 12 Analytical St and Postal code with SW1A 1AA, then click Place order"
+    },
+    {
+      "type": "assertion",
+      "description": "The confirmation page says Order placed and lists Speckled Mug \u00d7 2"
+    },
+    {
+      "type": "assertion",
+      "description": "The Total charged amount reads exactly $43.00"
+    }
+  ]
+}

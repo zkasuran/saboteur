@@ -1,0 +1,25 @@
+{
+  "projectId": "4fa4606f-0595-4ceb-9cd2-c6731b13e1c9",
+  "type": "frontend",
+  "name": "A sold-out item cannot be added",
+  "description": "Tea Cup Set is sold out and must not reach the cart.",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "On the shop page, find the Tea Cup Set product card"
+    },
+    {
+      "type": "assertion",
+      "description": "The Tea Cup Set card shows Sold out and its button is disabled"
+    },
+    {
+      "type": "action",
+      "description": "Try to click the Tea Cup Set button"
+    },
+    {
+      "type": "assertion",
+      "description": "The cart count in the store header still reads 0"
+    }
+  ]
+}

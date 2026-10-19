@@ -115,6 +115,7 @@ try {
     }
     out.placed = /\/order\/KLN-/.test(page.url());
     out.orderTotal = out.placed ? await page.textContent('[data-testid="order-total"]') : null;
+    out.receipt = out.placed ? [await page.textContent('[data-testid="receipt-subtotal"]'), await page.textContent('[data-testid="receipt-discount"]'), await page.textContent('[data-testid="receipt-shipping"]')].join(" ") : null;
     out.errors = errors;
     await ctx.close();
     return out;
@@ -131,6 +132,7 @@ try {
   check(clean.discount === "-$5.55" && clean.total === "$49.95", `clean: promo discount -$5.55, total $49.95 (${clean.discount}, ${clean.total})`);
   check(clean.invalidEmailBlocked && /valid email/.test(clean.emailError ?? ""), "clean: invalid email blocked with an error");
   check(clean.placed && clean.orderTotal === "$49.95", `clean: order placed, confirmation total $49.95 (${clean.orderTotal})`);
+  check(clean.receipt === "$55.50 -$5.55 Free", `clean: receipt itemises subtotal, discount, shipping (${clean.receipt})`);
   check(clean.errors.length === 0, "clean flow: zero console errors");
 
   const expectations = {
