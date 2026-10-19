@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="Saboteur">
+  <defs><radialGradient id="g" cx="78%" cy="0%" r="70%"><stop offset="0" stop-color="#e5484d" stop-opacity=".22"/><stop offset="1" stop-color="#e5484d" stop-opacity="0"/></radialGradient>
+  <radialGradient id="m" cx="34%" cy="28%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#e5484d"/><stop offset="1" stop-color="#3a0a0c"/></radialGradient>
+  <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".45"/></filter></defs>
+  <rect width="1280" height="400" rx="24" fill="#0a090c"/><rect width="1280" height="400" rx="24" fill="url(#g)"/>
+  <rect x=".5" y=".5" width="1279" height="399" rx="24" fill="none" stroke="#262129"/>
+  <g transform="translate(1020 200)" filter="url(#s)"><circle r="118" fill="url(#m)"/><circle r="92" fill="none" stroke="#000" stroke-opacity=".28" stroke-width="4"/>
+  <text y="34" text-anchor="middle" font-family="Inter Tight,Inter,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="96" font-weight="800" fill="#fff" fill-opacity=".92">S</text></g>
+  <text x="80" y="128" font-family="Inter Tight,Inter,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="4" fill="#e5484d">MUTATION TESTING FOR TESTSPRITE SUITES</text>
+  <text x="76" y="218" font-family="Inter Tight,Inter,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="96" font-weight="800" letter-spacing="-3" fill="#f4ecdf">Saboteur</text>
+  <text x="80" y="280" font-family="Inter Tight,Inter,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="34" font-weight="600" fill="#f4ecdf">Plant a bug. <tspan fill="#e5484d">See if your tests notice.</tspan> </text>
+  <text x="80" y="326" font-family="Inter Tight,Inter,-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="20" fill="#b1a899">14 planted bugs, one TestSprite suite, auto-heal off: 5 caught, then 14.</text></svg>

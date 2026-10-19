@@ -97,7 +97,7 @@ function home(ctx: Ctx): HTMLElement {
 
   const steps: [string, string, string][] = [
     ["Plant", "One flag per bug", "Each of the 14 faults is one line in the app behind isOn(). The URL prefix /x/m07/ turns one on. Same deploy, no rebuild."],
-    ["Replay", "Your suite, auto-heal off", "One TestSprite environment per fault. The runner replays the saved suite against each with --no-auto-heal, so no agent quietly rewrites a test to fit the bug."],
+    ["Replay", "Your suite, auto-heal off", "The runner points a TestSprite environment at each sabotaged build and replays the saved suite with --no-auto-heal, so no agent quietly rewrites a test to fit the bug."],
     ["Score", "Caught, survived, inconclusive", "A bug is caught when a test that passed clean now fails. The survivors are your next tests."],
   ];
 
@@ -153,7 +153,7 @@ function how(ctx: Ctx): HTMLElement {
     h("ol", { class: "how" },
       h("li", {}, h("h3", {}, "A flag at the line the bug lives on"), h("p", { class: "muted" }, "The store calls the saboteur where a real regression would sit. Clean builds never take the branch."), code(`const unit = sab.isOn("subtotal-drops-cents")\n  ? Math.floor(p.priceCents / 100) * 100   // the planted bug\n  : p.priceCents;                           // the real rule`, "src/shop/shop.ts")),
       h("li", {}, h("h3", {}, "One address per bug"), h("p", { class: "muted" }, "The prefix /x/m01/ to /x/m14/ turns a fault on for every page under it. Codes are opaque, so an AI tester cannot read the bug from the URL."), code("https://<your-app>/shop          clean\nhttps://<your-app>/x/m07/shop    checkout accepts an invalid email")),
-      h("li", {}, h("h3", {}, "One TestSprite environment per bug"), h("p", { class: "muted" }, "The runner creates environments named saboteur-m01 and so on, then replays the saved suite against each with auto-heal off."), code("testsprite test rerun --all --project $P \\\n  --env saboteur-m07 --no-auto-heal --wait \\\n  --summary-file runs/m07.json", "what the runner calls, per fault")),
+      h("li", {}, h("h3", {}, "One environment, repointed per bug"), h("p", { class: "muted" }, "On plans with several environments the runner keeps one per bug (saboteur-m01 and so on). On Starter, which allows one, it repoints the default environment at each sabotaged build in turn and always restores the clean URL afterwards. Every replay runs with auto-heal off."), code("testsprite project env update $P default --url https://<app>/x/m07/shop\ntestsprite test rerun --all --project $P --no-auto-heal --wait \\\n  --summary-file runs/m07.json", "what the runner calls, per fault (--single-env)")),
       h("li", {}, h("h3", {}, "A kill matrix"), h("p", { class: "muted" }, "Rows are bugs, columns are tests. A cell is a kill when a test that passed on the clean build fails on that bug. Survivors get a test in the next PR, and TestSprite checks that PR."), h("a", { class: "btn btn-sm", href: ctx.link("/report") }, "Open the matrix", icon("arrow", 16))),
     ),
   );
@@ -307,11 +307,11 @@ function docs(_ctx: Ctx): HTMLElement {
     h("p", { class: "muted small" }, "Keep the router base at the /x/<code> prefix so every in-app link stays on the sabotaged build. Ship flags only to preview and demo deploys if you prefer: production users never visit /x/ addresses."),
     h("h2", { class: "anchor", id: "runner" }, "2. Run the matrix"),
     h("p", { class: "muted" }, "The runner is one Node script with no dependencies. It shells out to the official TestSprite CLI with argument arrays, never a shell string, and reads your API key from the CLI's own credential file."),
-    code(`npm i -g @testsprite/testsprite-cli\ntestsprite setup --from-env   # reads TESTSPRITE_API_KEY\n\nnode scripts/saboteur.ts envs   --project <id> --origin https://<your-app>\nnode scripts/saboteur.ts run    --project <id> --label "Generated suite"\nnode scripts/saboteur.ts report # writes public/report.json`, "terminal"),
+    code(`npm i -g @testsprite/testsprite-cli\ntestsprite setup --from-env   # reads TESTSPRITE_API_KEY\n\nnode scripts/saboteur.ts envs   --project <id> --origin https://<your-app>\nnode scripts/saboteur.ts run    --project <id> --origin https://<your-app> --label "Generated suite" --single-env\nnode scripts/saboteur.ts report --project <id> --origin https://<your-app> --label \"Generated suite\"`, "terminal"),
     h("table", { class: "table table-cards" },
       h("thead", {}, h("tr", {}, h("th", {}, "Command"), h("th", {}, "What it does"))),
       h("tbody", {},
-        h("tr", {}, h("td", { "data-label": "Command" }, h("code", {}, "envs")), h("td", { "data-label": "What it does" }, "Creates or updates one TestSprite environment per fault, saboteur-m01 to saboteur-m14, pointing at origin/x/<code>/shop.")),
+        h("tr", {}, h("td", { "data-label": "Command" }, h("code", {}, "envs")), h("td", { "data-label": "What it does" }, "Creates one TestSprite environment per fault, saboteur-m01 to saboteur-m14, on plans that allow several. On Starter, skip it and pass --single-env to run.")),
         h("tr", {}, h("td", { "data-label": "Command" }, h("code", {}, "run")), h("td", { "data-label": "What it does" }, "Replays the whole suite on the default environment, then once per fault, with --no-auto-heal --wait. Results go to runs/<label>/.")),
         h("tr", {}, h("td", { "data-label": "Command" }, h("code", {}, "report")), h("td", { "data-label": "What it does" }, "Validates every summary, scores it and appends the run to public/report.json.")),
       ),
@@ -335,6 +335,8 @@ function method(ctx: Ctx): HTMLElement {
     "Replays run with auto-heal off. A suite that relies on healing to stay green will show inconclusive or failed baselines, which is a finding in itself.",
     "The 14 faults are hand-written for this store. A high score here does not prove a suite catches every regression in another app.",
     "Each fault is run once. A flaky test can fake a kill; check the clean baseline and rerun suspicious cells with testsprite test flaky.",
+    "Replays depend on the stored test code. We found PR runs with auto-heal on rewriting a test's start address to that PR's preview URL, and weakening a receipt test to check only two words. The stored code is pinned in testsprite/code/ and was checked after the next PR run.",
+    "The nine tests added after the first matrix were written against this catalog, so 14 of 14 on the second matrix is expected. The useful number is the generated suite's 5 of 14.",
     "Kiln is a demo store. Nothing is sold, charged or shipped, and orders live only in your browser.",
   ];
   return h(

@@ -5,7 +5,7 @@
   --ok: #157f3c; --ok-soft: #e3f5e9; --warn: #9a5b00; --warn-soft: #fff1d6; --bad: #b42318; --bad-soft: #fde8e7;
   --shadow: 0 1px 2px rgb(16 24 40 / 0.06), 0 4px 16px rgb(16 24 40 / 0.06);
   --shadow-lg: 0 12px 40px rgb(16 24 40 / 0.12);
-  --header: rgb(255 255 255 / 0.86);
+  --header: #ffffff;
   --code-bg: #f4f5f7;
 }
 :root[data-theme="dark"] {
@@ -14,7 +14,7 @@
   --ok: #4cc38a; --ok-soft: #11281c; --warn: #f5b74e; --warn-soft: #2b2010; --bad: #ff6b60; --bad-soft: #2c1312;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 16px rgb(0 0 0 / 0.25);
   --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.45);
-  --header: rgb(12 13 16 / 0.82);
+  --header: #0c0d10;
   --code-bg: #101217;
 }
 

@@ -23,7 +23,7 @@ testsprite test create --plan-from testsprite/plans/<file>.json
 ## Corrected generated test
 
 `generated-place-order-updated-qty.json` replaces the plan of the generated test "Place an order from a cart with
-updated quantity and shipping selection". It asked the browser to pick a shipping option, and Kiln has never had
+updated quantity and shipping selection". It asked the browser to pick a shipping option. Kiln has never had
 one (one flat $6.00 rate, free from $50.00), so it failed on every correct build. The new plan keeps its intent and
 asserts exact totals instead.
 
